@@ -23,7 +23,17 @@ Obs: Only the last line of the query, make sure you query return just one line.
 
 It will return to you a DataTable resultant of the query.
 
+## Future
+
+* GetField return a object.
+* ExecMultiple return a list of objects.
+* Integration with other servers (Oracle, Mysql, Postgre).
+
 ## Did you like it?
 
 Do want to make it better? Be comfortable to make changes!
-If you want to make a sugestion email-me mtfprado@outlook.com
+If you want to make a sugestion email-me mtfprado@outlook.com.
+
+## Did it help you?
+
+Won't forget to give me credits, it will help me too.
