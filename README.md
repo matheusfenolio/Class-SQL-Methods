@@ -6,7 +6,7 @@ This is a class with static functions to make easy the use with databases in C# 
 
 It will execute your query and return a int with the number of changed rows.
 
-```
+```C#
 SQLMethods.ExecQuery(sql);
 ```
 
@@ -14,7 +14,7 @@ SQLMethods.ExecQuery(sql);
 
 It will execute your query and return a object.
 
-```
+```C#
 SQLMethods.ExecScalar(sql);
 ```
 
@@ -22,7 +22,7 @@ SQLMethods.ExecScalar(sql);
 
 It will execute a list of querys with a transaction, if one has problem it will rollback.
 
-```
+```C#
 List<string> sql = new List<string>();
 
 sql.Add("insert into....");
@@ -37,7 +37,7 @@ SQLMethods.ExecMultiple(sql);
 It will return to you a string with the value of the column. 
 Obs: Only the last line of the query, make sure you query return just one line. 
 
-```
+```C#
 SQLMethods.GetField(sql, "FieldName");
 ```
 
@@ -45,7 +45,7 @@ SQLMethods.GetField(sql, "FieldName");
 
 It will return to you a DataTable resultant of the query.
 
-```
+```C#
 SQLMethods.GetDT(sql);
 ```
 
@@ -53,7 +53,7 @@ SQLMethods.GetDT(sql);
 
 Use the String.Format to pass your parameters to the query.
 
-```
+```C#
 String.Format(@"select * from Table where name = '{0}' and age = {1}", Name, Age);
 ```
 
