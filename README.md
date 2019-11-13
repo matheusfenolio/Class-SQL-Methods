@@ -1,2 +1,3 @@
-# Class-Metodos-SQL
-Classe para utilizar SQL em projetos C#
+# Class-SQL-Methods
+
+Class for using SQL in C# projects
