@@ -1,6 +1,6 @@
-# Class-SQL-Methods
+# SQLMethods Class
 
-Class for using SQL in C# projects.
+This is a class with static functions to make easy the use with databases in C# projects.
 
 ### ExecQuery
 
@@ -22,6 +22,15 @@ Obs: Only the last line of the query, make sure you query return just one line.
 ### GetDT
 
 It will return to you a DataTable resultant of the query.
+
+### Advice
+
+Use the String.Format to pass your parameters to the query.
+
+```
+String.Format(@"select * from Table where name = '{0}' and age = {1}", Name, Age);
+```
+
 
 ## Future
 
