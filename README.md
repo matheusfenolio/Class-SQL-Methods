@@ -6,22 +6,46 @@ This is a class with static functions to make easy the use with databases in C# 
 
 It will execute your query and return a int with the number of changed rows.
 
+```
+SQLMethods.ExecQuery(sql);
+```
+
 ### ExecScalar
 
 It will execute your query and return a object.
 
+```
+SQLMethods.ExecScalar(sql);
+```
+
 ### ExecMutiple
 
 It will execute a list of querys with a transaction, if one has problem it will rollback.
+
+```
+List<string> sql = new List<string>();
+sql.Add("insert into....");
+sql.Add("insert into....");
+sql.Add("insert into....");
+SQLMethods.ExecMultiple(sql);
+```
 
 ### GetField
 
 It will return to you a string with the value of the column. 
 Obs: Only the last line of the query, make sure you query return just one line. 
 
+```
+SQLMethods.GetField(sql, "FieldName");
+```
+
 ### GetDT
 
 It will return to you a DataTable resultant of the query.
+
+```
+SQLMethods.GetDT(sql);
+```
 
 ### Advice
 
