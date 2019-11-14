@@ -1,6 +1,6 @@
 # SQLMethods Class
 
-This is a class with static functions to make easy the use with databases in C# projects.
+It's a class with static functions to make easy the use with databases in C# projects.
 
 ### ExecQuery
 
@@ -66,9 +66,9 @@ String.Format(@"select * from Table where name = '{0}' and age = {1}", Name, Age
 
 ## Did you like it?
 
-Do want to make it better? Be comfortable to make changes!
-If you want to make a sugestion email-me mtfprado@outlook.com.
+Do you wanna make it better? Be comfortable to make changes!
+If you wanna make a sugestion email-me mtfprado@outlook.com.
 
 ## Did it help you?
 
-Won't forget to give me credits, it will help me too.
+Don't forget to give me credits, it will help me too.
