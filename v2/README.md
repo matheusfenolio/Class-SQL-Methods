@@ -1,15 +1,16 @@
 # SQLMethods Class
 
 It's a class with static functions to make easy the use with databases in C# projects.
-This is the version 2. Now you have compatibility with SqlServer, MySql and Oracle.
+This is the version 2. Now you have compatibility with SqlServer, MySql, Oracle and PostgreSql.
 
 ### References
 
-Please, note of you need to add 3 references to you project.
+Please, note of you need to add 4 references to you project.
 
 * Newtonsoft.Json
 * MySql.Data
 * Oracle.ManagedDataAccess
+* Npgsql
 
 ### Configuration file
 
@@ -21,7 +22,7 @@ Please, note of you need to add 3 references to you project.
     "User": "sa", 
     "Password": "masterkey ",
     "Timeout": "60", 
-    "Type": "sqlServer", 
+    "Type": "SqlServer", 
     "ConnectionStringModel": "",
     "ConnectionString": "" 
 }
@@ -33,7 +34,7 @@ Please, note of you need to add 3 references to you project.
 * User //{3}
 * Password //{4}
 * Timeout //{5}
-* Type //It can be sqlServer, MySql, Oracle.
+* Type //It can be SqlServer, MySql, Oracle or PostgreSQL.
 * ConnectionStringModel //If you need to put your connection string model: Follow the in front of the fields. e.g. 
     ```
     Data Source={0},{1};Initial Catalog={2};User id={3};Password={4};Connection Timeout={5};

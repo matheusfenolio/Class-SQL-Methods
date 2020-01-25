@@ -6,6 +6,7 @@ using System.IO;
 using Newtonsoft.Json;
 using MySql.Data.MySqlClient;
 using Oracle.ManagedDataAccess.Client;
+using Npgsql;
 
 namespace SQLMethods //Change to your namespace project
 {
@@ -54,7 +55,7 @@ namespace SQLMethods //Change to your namespace project
 
                 string defaultConnectionString = string.Empty;
 
-                if (ConnectionParameters.Type == "sqlServer")
+                if (ConnectionParameters.Type == "SqlServer")
                 {
                     connection = new SqlConnection();
                     command = new SqlCommand();
@@ -74,6 +75,13 @@ namespace SQLMethods //Change to your namespace project
                     command = new OracleCommand();
 
                     defaultConnectionString = "Data Source=(DESCRIPTION =(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST ={0})(PORT = {1})))(CONNECT_DATA =(SERVICE_NAME = {2})));User ID={3};Password={4};Unicode=True";
+                }
+                else if (ConnectionParameters.Type == "PostgreSQL")
+                {
+                    connection = new NpgsqlConnection();
+                    command = new NpgsqlCommand();
+
+                    defaultConnectionString = "Server={0};Username={3};Database={2};Port={1};Password={4};SSLMode=Prefer";
                 }
 
 
@@ -162,41 +170,6 @@ namespace SQLMethods //Change to your namespace project
                 }
 
                 transaction.Commit();
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    transaction.Rollback();
-                    throw new Exception(ex.Message, ex);
-                }
-                catch (Exception ex2)
-                {
-                    throw new Exception(ex2.Message, ex2);
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-
-        public static Object ExecScalar(string sql)
-        {
-            try
-            {
-                SetParameters();
-                connection.Open();
-                transaction = connection.BeginTransaction("SQLMethods");
-                command.Transaction = transaction;
-
-                command.CommandText = sql;
-
-                object returnValue = command.ExecuteScalar();
-
-                transaction.Commit();
-
-                return returnValue;
             }
             catch (Exception ex)
             {
