@@ -27,6 +27,9 @@ This is the version 2. Now you have compatibility with SqlServer, MySql and Orac
 * Timeout //{5}
 * Type //It can be sqlServer, MySql, Oracle.
 * ConnectionStringModel //If you need to put your connection string model: Follow the in front of the fields. e.g. 
+    ```
+    Data Source={0},{1};Initial Catalog={2};User id={3};Password={4};Connection Timeout={5};
+    ```
 * ConnectionString //Here you're gonna put your ready connection string if you don't wanna to use the default in the class.
 
 ### ExecQuery
