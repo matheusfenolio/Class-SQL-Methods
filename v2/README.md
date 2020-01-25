@@ -7,17 +7,27 @@ This is the version 2. Now you have compatibility with SqlServer, MySql and Orac
 
 ```JSON
 {
-    "Host": "Server address", //{0}
-    "Port": "Server port", //{1}
-    "Instance": "Schema name", //{2}
-    "User": "User name", //{3}
-    "Password": "Password ", //{4}
-    "Timeout": "60", //{5}
-    "Type": "Type of server", //It can be sqlServer, MySql, Oracle.
-    "ConnectionStringModel": "", //If you need to put your connection string model: Follow the in front of the fields. e.g. 
-    "ConnectionString": "" //Here you're gonna put your ready connection string if you don't wanna to use the default in the class.
+    "Host": "127.0.0.1",
+    "Port": "1433", 
+    "Instance": "master",
+    "User": "sa", 
+    "Password": "masterkey ",
+    "Timeout": "60", 
+    "Type": "sqlServer", 
+    "ConnectionStringModel": "",
+    "ConnectionString": "" 
 }
 ```
+
+* Host //*{0}
+* Port //{1}
+* Instance //{2}
+* User //{3}
+* Password //{4}
+* Timeout //{5}
+* Type //It can be sqlServer, MySql, Oracle.
+* ConnectionStringModel //If you need to put your connection string model: Follow the in front of the fields. e.g. 
+* ConnectionString //Here you're gonna put your ready connection string if you don't wanna to use the default in the class.
 
 ### ExecQuery
 
