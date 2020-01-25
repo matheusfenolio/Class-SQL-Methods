@@ -192,7 +192,7 @@ namespace SQLMethods //Change to your namespace project
 
                 command.CommandText = sql;
 
-                object returnValue = cmd.ExecuteScalar();
+                object returnValue = command.ExecuteScalar();
 
                 transaction.Commit();
 
