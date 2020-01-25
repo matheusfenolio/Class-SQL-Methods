@@ -3,6 +3,14 @@
 It's a class with static functions to make easy the use with databases in C# projects.
 This is the version 2. Now you have compatibility with SqlServer, MySql and Oracle.
 
+### References
+
+Please, note of you need to add 3 references to you project.
+
+* Newtonsoft.Json
+* MySql.Data
+* Oracle.ManagedDataAccess
+
 ### Configuration file
 
 ```JSON
