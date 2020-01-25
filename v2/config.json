@@ -1,0 +1,11 @@
+{
+    "Host": "matheusfenolio.database.windows.net",
+    "Port": "1433",
+    "Instance": "BD",
+    "User": "matheusfenolio",
+    "Password": "M@theus164",
+    "Timeout": "60",
+    "Type": "sqlServer",
+    "ConnectionStringModel": "",
+    "ConnectionString": ""
+}
