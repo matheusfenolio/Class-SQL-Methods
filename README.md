@@ -8,7 +8,3 @@ You can use it whatever and anywhere you want. But please, give me some credits 
 
 Do you wanna make it better? Be comfortable to make changes!
 If you wanna make a sugestion email-me mtfprado@outlook.com.
-
-## Did it help you?
-
-Don't forget to give me credits, it will help me too.
