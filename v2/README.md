@@ -80,7 +80,7 @@ Obs: Only the last line of the query, make sure you query return just one line.
 SQLMethods.GetField(sql, "FieldName");
 ```
 
-### GetDT
+### GetDataTable
 
 It will return to you a DataTable resultant of the query.
 
