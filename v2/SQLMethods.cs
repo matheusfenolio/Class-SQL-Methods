@@ -181,6 +181,41 @@ namespace SQLMethods //Change to your namespace project
             }
         }
 
+        public static Object ExecScalar(string sql)
+        {
+            try
+            {
+                SetParameters();
+                connection.Open();
+                transaction = connection.BeginTransaction("SQLMethods");
+                command.Transaction = transaction;
+
+                command.CommandText = sql;
+
+                object returnValue = cmd.ExecuteScalar();
+
+                transaction.Commit();
+
+                return returnValue;
+            }
+            catch (Exception ex)
+            {
+                try
+                {
+                    transaction.Rollback();
+                    throw new Exception(ex.Message, ex);
+                }
+                catch (Exception ex2)
+                {
+                    throw new Exception(ex2.Message, ex2);
+                }
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public static DataTable GetDataTable(string sql)
         {
             try
