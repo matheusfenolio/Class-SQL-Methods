@@ -59,6 +59,7 @@ namespace SQLMethods //Change to your namespace project
                 {
                     connection = new SqlConnection();
                     command = new SqlCommand();
+                    transaction = new SqlTransaction();
 
                     defaultConnectionString = "Data Source={0},{1};Initial Catalog={2};User id={3};Password={4};Connection Timeout={5};";
                 }
@@ -66,6 +67,7 @@ namespace SQLMethods //Change to your namespace project
                 {
                     connection = new MySqlConnection();
                     command = new MySqlCommand();
+                    transaction = new MySqlTransaction();
 
                     defaultConnectionString = "Server={0};Port={1};Database={2};Uid={3};Pwd={4}";
                 }
@@ -73,6 +75,7 @@ namespace SQLMethods //Change to your namespace project
                 {
                     connection = new OracleConnection();
                     command = new OracleCommand();
+                    transaction = new OracleTransaction();
 
                     defaultConnectionString = "Data Source=(DESCRIPTION =(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST ={0})(PORT = {1})))(CONNECT_DATA =(SERVICE_NAME = {2})));User ID={3};Password={4};Unicode=True";
                 }
@@ -80,6 +83,7 @@ namespace SQLMethods //Change to your namespace project
                 {
                     connection = new NpgsqlConnection();
                     command = new NpgsqlCommand();
+                    transaction = new NpgsqlTransaction();
 
                     defaultConnectionString = "Server={0};Username={3};Database={2};Port={1};Password={4};SSLMode=Prefer";
                 }
