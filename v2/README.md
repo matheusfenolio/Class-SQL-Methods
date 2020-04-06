@@ -90,7 +90,13 @@ SQLMethods.GetDaTaTable(sql);
 
 ### Advice
 
-Use the String.Format to pass your parameters to the query.
+You can use this to make your sql string.
+
+```C#
+string sql = $@"select * from Table where name = '{Name}' and age = {Age}");
+```
+
+Or use the String.Format.
 
 ```C#
 String.Format(@"select * from Table where name = '{0}' and age = {1}", Name, Age);
@@ -109,4 +115,4 @@ If you wanna make a sugestion email-me mtfprado@outlook.com.
 
 ## Did it help you?
 
-Don't forget to give me credits, it will help me too.
+Don't forget to give me credits, it will help me very much.
