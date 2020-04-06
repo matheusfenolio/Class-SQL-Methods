@@ -57,8 +57,8 @@ It will execute a list of querys with a transaction, if one has problem it will 
 List<string> sql = new List<string>();
 
 sql.Add("insert into....");
-sql.Add("insert into....");
-sql.Add("insert into....");
+sql.Add("update table....");
+sql.Add("delete from....");
 
 SQLMethods.ExecQuery(sql);
 ```
